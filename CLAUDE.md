@@ -9,15 +9,17 @@ This is a demonstration repository for Claude Code's Test-Driven Development (TD
 ## Architecture
 
 ### Application Structure
+
 - **Entry Point**: `bin/www` - HTTP server setup and port configuration
 - **Main App**: `app.js` - Express application configuration, middleware setup, and route mounting
 - **Routes**: `routes/` directory contains route handlers
   - `routes/index.js` - Home page route handler
-  - `routes/users.js` - User-related route handler  
+  - `routes/users.js` - User-related route handler
 - **Views**: `views/` directory with Jade templates for server-side rendering
 - **Static Assets**: `public/` directory for CSS, JavaScript, and image files
 
 ### Key Dependencies
+
 - **Express.js** (v4.16.1) - Web application framework
 - **Jade** (v1.11.0) - Template engine for views
 - **Morgan** - HTTP request logger middleware
@@ -26,6 +28,7 @@ This is a demonstration repository for Claude Code's Test-Driven Development (TD
 ## Development Commands
 
 ### Basic Operations
+
 ```bash
 # Install dependencies
 npm install
@@ -55,6 +58,7 @@ npx jest --testNamePattern="specific test name"
 The application runs on port 3000 by default (configurable via PORT environment variable).
 
 ### Testing Framework
+
 - **Jest** - JavaScript testing framework
 - **Supertest** - HTTP assertion library for testing Express routes
 - Tests are located in the `test/` directory
@@ -62,7 +66,7 @@ The application runs on port 3000 by default (configurable via PORT environment 
 
 ## MANDATORY TDD PROCESS - NO EXCEPTIONS
 
-You MUST follow Test-Driven Development (TDD) for ALL code changes. This is not optional.
+You MUST follow Test-Driven Development (TDD) for ALL code changes. This is not optional. It is ABSOLUTElY CRITICAL that you write ONE test at the time, cycle through red/green before writing the next test.
 
 ### REQUIRED TDD CYCLE - FOLLOW EXACTLY:
 
@@ -127,12 +131,14 @@ Before completing any task, verify:
 ## Development Notes
 
 ### Express.js Patterns
+
 - Routes are organized in separate files under `routes/`
 - Middleware is configured in `app.js`
 - Error handling follows Express conventions with 404 and error handler middleware
 - View engine is set to Jade with views in `views/` directory
 
 ### Module System
+
 This project uses CommonJS modules (`require`/`module.exports`). When adding new functionality, maintain consistency with this pattern unless explicitly modernizing to ES modules.
 
 Remember: TDD is not just about having tests - it's about the discipline of writing tests FIRST and using them to drive the implementation. Follow this process religiously.
